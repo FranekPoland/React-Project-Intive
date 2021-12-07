@@ -1,0 +1,52 @@
+{
+	"rooms": [
+		{
+			"id": "0001",
+			"title": "Single",
+			"price": "80",
+			"currency": "usd",
+			"image": "/rooms/room-1.jpeg",
+			"size": "11m"
+		},
+		{
+			"id": "0002",
+			"title": "Double",
+			"price": "100",
+			"currency": "usd",
+			"image": "/rooms/room-2.jpeg",
+			"size": "16m"
+		},
+		{
+			"id": "0003",
+			"title": "Triple",
+			"price": "120",
+			"currency": "usd",
+			"image": "/rooms/room-3.jpeg",
+			"size": "20m"
+		},
+		{
+			"id": "0004",
+			"title": "Quad",
+			"price": "140",
+			"currency": "usd",
+			"image": "/rooms/room-4.jpeg",
+			"size": "28m"
+		},
+		{
+			"id": "0005",
+			"title": "Queen",
+			"price": "160",
+			"currency": "usd",
+			"image": "/rooms/room-5.jpeg",
+			"size": "28m"
+		},
+		{
+			"id": "0006",
+			"title": "King",
+			"price": "200",
+			"currency": "usd",
+			"image": "/rooms/room-6.jpeg",
+			"size": "45m"
+		}
+	]
+}
