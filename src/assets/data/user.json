@@ -1,0 +1,9 @@
+{
+  "user": {
+    "id": "001",
+    "email": "patronage@test.pl",
+    "password": "1234567",
+    "name": "John",
+    "surname": "Doe"
+  }
+}
