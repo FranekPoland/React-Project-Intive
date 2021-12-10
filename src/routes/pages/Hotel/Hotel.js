@@ -31,6 +31,8 @@ class Hotel extends React.Component {
                             page={this.state.page}
                             title={'HOTEL DE LAS PALMAS'}
                             link={'Albufeira, Portugal'}
+                            rating={8.6}
+                            votes={429}
                      />
                       <div className="about-content">
                           <Content />
