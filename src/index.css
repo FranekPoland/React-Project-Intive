@@ -34,3 +34,55 @@ body {
     box-sizing: border-box;
 }
 
+.img-container {
+    display: inline-block;
+    background-size: cover;
+}
+
+.imgbox {
+    width: 33.33%;
+    height: 100%;
+    margin: 0;
+    float: left;
+    box-sizing: border-box;
+}
+
+.img {
+    width: 33.33%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.view-container {
+    margin-top: -0.5%;
+    height: 80%;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f0eeee;
+}
+
+.about-content {
+    width: 100%;
+    padding: 4.7%;
+    box-sizing: border-box;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.contactus-content {
+    width: 100%;
+    padding: 4.7%;
+    box-sizing: border-box;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.hotel-content {
+    height: 90.5%;
+    width: 100%;
+    padding: 4.7%;
+    box-sizing: border-box;
+    font-size: 12px;
+}

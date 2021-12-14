@@ -26,13 +26,13 @@ class ContactUs extends React.Component {
                         <img className="imgbox img" src={hotel2} alt="hotel2"></img>
                         <img className="imgbox img" src={hotel3} alt="hotel3"></img>
                     </div>
-                    <div className="view-container about">
+                    <div className="view-container">
                          <ContainerHeader 
                             page={this.state.page}
                             title={'CONTACT US'}
                             link={'Hotel'}
                      />
-                     <div className="about-content">
+                     <div className="contactus-content">
                         <Content />
                      </div>
                     </div>

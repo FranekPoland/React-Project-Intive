@@ -1,7 +1,6 @@
 import './ContainerHeader.css'
 
 
-// TODO make own containerheader component for hotel component
 
 function ContainerHeader(props) {
     let rating = '';
@@ -32,15 +31,3 @@ function ContainerHeader(props) {
 }
 
 export default  ContainerHeader;
-
-// 
-// renderElement() {
-// if (this.state.page === 'hotel' ? <div className="rating">
-//                          <div className="score">
-//                         8.6{props.rating}
-//                  </div>
-//                  <div className="votes">
-//                      429 votes   
-//                  </div>
-//                  </div>) 
-//                 }
