@@ -35,6 +35,16 @@
     margin-left: 10px;
 }
 
+.header-rooms {
+    font-size: 130%;
+    height: 100%;
+    padding: 2%;
+    box-sizing: border-box;
+    width: 20%;
+    font-weight: 200;
+    float: left;
+}
+
 .link-about {
     margin-left: -4%;
     padding: 20px;
@@ -56,6 +66,14 @@
     font-size: 75%;
     text-decoration: underline;
     text-underline-offset: 30%;
+}
+
+.link-rooms {
+    margin-left: -4%;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
 }
 
 .link-hotel {

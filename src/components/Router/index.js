@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AboutUs from '../../routes/pages/AboutUs/AboutUs';
 import Hotel from '../../routes/pages/Hotel/Hotel';
 import ContactUs from '../../routes/pages/ContactUs/ContactUs';
+import Rooms from '../../routes/pages/Rooms/Rooms';
 
 
 
@@ -14,8 +15,7 @@ const Router = () => {
 				<Route path='/aboutus' element={<AboutUs />} />
 				<Route path='/hotel' element={<Hotel />} />
 				<Route path='/contactus' element={<ContactUs />} />
-				{/* <Route path='/hotel' element={<Rooms />} /> */}
-				{/* Dodaj potrzebne ścieżki aplikacji */}
+				<Route path='/rooms' element={<Rooms />} />
 			</Routes>
 		</BrowserRouter>
 	);

@@ -71,6 +71,14 @@ body {
     display: inline-block;
 }
 
+.hotel-content {
+    height: 90.5%;
+    width: 100%;
+    padding: 4.7%;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
 .contactus-content {
     width: 100%;
     padding: 4.7%;
@@ -79,10 +87,10 @@ body {
     display: inline-block;
 }
 
-.hotel-content {
-    height: 90.5%;
+.rooms-content {
     width: 100%;
-    padding: 4.7%;
+    padding: 2%;
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 1em;
+    display: inline-block;
 }

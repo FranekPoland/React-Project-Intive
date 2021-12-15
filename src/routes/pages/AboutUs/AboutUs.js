@@ -12,7 +12,7 @@ class AboutUs extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            page: 'about'
+            page: 'about',
          }
     }
 

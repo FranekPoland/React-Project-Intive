@@ -50,10 +50,10 @@
 .box3 {
     height: 100%;
     width: 20%;
-    display: inline-block;
     box-sizing: border-box;
     position: relative;
     padding-left: 8%;
+    float: right;
 }
 
 .header-img {
