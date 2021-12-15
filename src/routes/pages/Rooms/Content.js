@@ -10,13 +10,12 @@ function Content(props) {
                 </div>
                 <div className="room-info">
                     <div className="room-txt">{props.title}</div>
-                    <div className="room-txt">Price: {props.price} {props.currency.toUpperCase()}</div>
-                    {/* <div className="room-txt"></div> */}
+                    <div className="room-txt">
+                        Price: {props.price} {props.currency.toUpperCase()}
+                    </div>
                 </div>
                 <div className="room-info">
                     <div className="room-txt">Room size: {props.size}</div>
-                    {/* <div className="room-txt">TEST</div>
-                    <div className="room-txt">TEST</div> */}
                 </div>
             </div>
         </div>
