@@ -15,10 +15,25 @@ class Rooms extends React.Component {
         this.state = { 
             page: 'rooms',
             isSearch: true,
-         }
+            rooms: roomsObj.rooms
+        }
     }
-    render() { 
+        
+    search(letter) {
         const rooms = roomsObj.rooms;
+        let copyRooms =[];
+        rooms.map((room) => {
+            var title = room.title.toUpperCase();
+            if (title.indexOf(letter.toUpperCase()) > -1) {
+               copyRooms.push(room);
+            }
+        });
+        this.setState({rooms: copyRooms});
+    }
+   
+
+    render() { 
+        const rooms = this.state.rooms;
         const roomsList = rooms.map((room) => {
            return (<li key={room.id}>
                  <Content title={room.title}
@@ -35,6 +50,7 @@ class Rooms extends React.Component {
             <div className="main">
                 <Header 
                     isSearch={true}
+                    search={(e) => this.search(e)}
                     />
                 <Navbar />
                 <div className="container">
@@ -50,7 +66,6 @@ class Rooms extends React.Component {
                             link={'About us'}
                         />
                         <div className="rooms-content">
-                          {/* */}
                           <ul>{roomsList}</ul>
                       </div>
                     </div>
