@@ -8,14 +8,14 @@ import ContainerHeader from '../../../components/common/ContainerHeader';
 import CardLeft from './CardLeft';
 import CardRight from './CardRight';
 import './Hotel.css';
-// TODO DELETE after finish with new comp import Content from './Content';
+
 
 
 class Hotel extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            page: 'hotel'
+            page: 'hotel',
          }
     }
     render() { 
@@ -40,7 +40,6 @@ class Hotel extends React.Component {
                       <div className="hotel-content">
                           <CardLeft />
                           <CardRight />
-                          {/* <Content /> */}
                       </div>
                     </div>
                    
