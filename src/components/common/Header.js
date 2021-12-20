@@ -41,39 +41,3 @@ class Header extends React.Component {
 }
  
 export default Header;
-
-
-
-// function Header(props) {
-
-//     myFunction() {
-//         var x = document.getElementById("fname");
-//           x.value = x.value.toUpperCase();
-//     }
-    
-
-//     let search = '';
-//     if (props.isSearch) {
-//         search = <div className="box2">
-//                     <input className="search-container" id="fname" type="text" onKeyUp={() => } placeholder="Search rooms" name="search"/>
-//                 </div>
-//     }
-
-
-
-//     return ( 
-//         <div className="header"> 
-//              <div className="box1">
-//                  <img className="logo" src={logo} alt="logo"></img>
-//              </div>
-//              {search}
-//              <div className="box3">
-//                 <img className="header-img" src={user} alt="user"></img>
-//                 <div className="user-name">
-//                     Hi John
-//                 </div>
-//             </div>
-//     </div>
-//      );
-// }
-

@@ -13,61 +13,74 @@ class ContactUs extends React.Component {
         super(props);
         this.state = { 
             page: 'contactus',
+            client_name: '',
+            client_email: '',
+            client_phone: '',
+            client_msg:'',
+            isValid: false
          }
     }
 
-    // var regex = /[/\S+@\S+\.\S+/]/g
-    // Validation in progress, not working, not finished yet
+    updateState(e) {
+        const key = e.target.id;
+        const value = e.target.value;
+        this.setState({[key]: value}); 
+      
+    }
 
-    // function showErr(msg) {
-    //     document.getElementById('').innerHtml(msg);
-    // }
+    sendMessage() {
+        //TODO send req
+        //TODO 
+    }
 
-    // function hideErr() {
-    //         document.getElementById('').innerHtml('');
-    //         document.getElementById('').style.display = "none";
-    // }
+    handleOnClick() {
+        this.validateForm();
+        if (this.state.isValid) {
+            this.sendMessage();
+        }
+    }
+
+    showErr(error) {
+        console.log('error field', error.field)
+        const id = 'contact_' + error.field;
+        const inputId = 'client_' + error.field;
+        const msg = error.msg;
+        document.getElementById(id).innerHTML = msg;
+        document.getElementById(inputId).classList.add('error');
+        this.setState({isValid: false})
+    }
+
+     hideErr() {
+            document.querySelectorAll('.feedback').forEach((elem) =>{
+                elem.innerHTML = '';
+            });
+            document.querySelectorAll('.error').forEach((elem) => {
+                elem.classList.remove('error');
+            });
+            this.setState({isValid: true})
+    }
 
 
 
-    // function ValidateForm() {
-    //     hideErr();
-    //     var name = documentQuerySelector('.client-name');
-    //     var email = documentQuerySelector('.email');
-    //     var phone = documentQuerySelector('.phone');
-    //     var msg = documentQuerySelector('.msg');
-    //     var regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        
-    //         if (name.length === '' || name === undefined) {
-    //             showErr('Please type Your name');
-    //             return false
-    //         } else {
-    //             return true
-    //         }
-
-    //         if (email === '') {
-    //             showErr('Please type your email');
-    //             return false
-    //         } else if (!regEx.test(email)) {
-    //             showErr('Invalid email address');
-    //         } else {
-    //             return true
-    //         }
-
-    //         if (phone.trim().length < 9 ) {
-    //             showErr('Invalid phone number');
-    //             return false
-    //         } else {
-    //             return true
-    //         }
-
-    //         if (msg.length <= 3) {
-    //             showErr('The message should be at least 10 characters long');
-    //             return false
-    //         } else {
-    //             return true
-    //         }
-    // }
+    validateForm() {
+        this.hideErr();
+        var regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        console.log(this.state, 'state');
+            if ( this.state.client_name === '') {
+                this.showErr({msg: 'Please type Your name', field: 'name'});
+            } 
+            if (this.state.client_email === '') {
+                this.showErr({msg: 'Please type Your email adress', field: 'email'});
+            } else if (!regEx.test(this.state.client_email)) {
+                this.showErr({msg: 'Invalid email adress, try once again', field: 'email'});
+            } 
+            if (this.state.client_phone.trim().length < 9 ) {
+                this.showErr({msg: 'Invalid phone number', field: 'phone'});
+            }
+            if (this.state.client_msg.length < 3) {
+                this.showErr({msg: 'The message should be at least 3 characters long', field: 'msg'});
+            }
+    }
 
 
 
@@ -90,7 +103,10 @@ class ContactUs extends React.Component {
                             link={'Hotel'}
                         />
                         <div className="contactus-content">
-                            <Content />
+                            <Content 
+                            updateState={(e) => this.updateState(e)}
+                            handelOnClick={() => this.handleOnClick()}
+                            />
                         </div>
                     </div>
                
