@@ -50,7 +50,7 @@ class Rooms extends React.Component {
             <div className="main">
                 <Header 
                     isSearch={true}
-                    search={(e) => this.search(e)}
+                    search1={(letter) => this.search(letter)}
                     />
                 <Navbar />
                 <div className="container">

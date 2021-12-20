@@ -9,15 +9,19 @@ function Content() {
                 </div>
                  <div>
                     <input className="input-contact client-name" type="text" placeholder="Name and Surname" name="surname"/>
+                    <span id="contact-name" className="feedback"></span>
                 </div>
                 <div>
-                    <input className="input-contact client-name" type="text" placeholder="E-mail" name="email"/>
+                    <input className="input-contact email" type="text" placeholder="E-mail" name="email"/>
+                    <span id="email" className="feedback"></span>
                 </div>
                 <div>
-                    <input className="input-contact client-name" type="text" placeholder="Phone number" name="phone"/>
+                    <input className="input-contact phone" type="text" placeholder="Phone number" name="phone"/>
+                    <span id="phone" className="feedback"></span>
                 </div>
                 <div>
-                    <textarea rows="6" className="textarea-contact" type="text" placeholder="Describe your message..."></textarea>
+                    <textarea rows="6" className="textarea-contact msg" type="text" placeholder="Describe your message..."></textarea>
+                    <span id="msg" className="feedback"></span>
                 </div>
                 <div className="send">
                     SEND MESSAGE

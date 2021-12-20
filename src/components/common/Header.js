@@ -10,16 +10,14 @@ class Header extends React.Component {
         
          }
     }
-    handleKeyUp(e) {
-        this.props.search(e.target.value)
-    }
+    
     render() { 
         let search = '';
         if (this.props.isSearch) {
             search = <div className="box2">
                         <input className="search-container" 
                         type="text"  
-                        onKeyUp={(e) => this.props.search(e.target.value)} 
+                        onKeyUp={(letter) => this.props.search1(letter.target.value)} 
                         placeholder="Search rooms" 
                         name="search"/>
                     </div>
