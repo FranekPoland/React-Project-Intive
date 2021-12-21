@@ -44,6 +44,7 @@ function Content(props) {
                 onClick={() => props.handelOnClick()}>
                     SEND MESSAGE
                 </div>
+                <span className="feedback_message"></span>
             </div>
                 <div className="contact-text">
                     Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.

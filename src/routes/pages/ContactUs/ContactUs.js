@@ -25,61 +25,65 @@ class ContactUs extends React.Component {
         const key = e.target.id;
         const value = e.target.value;
         this.setState({[key]: value}); 
-      
     }
 
     sendMessage() {
-        //TODO send req
-        //TODO 
+        const name = this.state.client_name
+        const feedback = document.querySelector('.feedback_message');
+        feedback.innerHTML = '';
+        feedback.innerHTML = 'Thank you ' + name + ' for a message, we will contact you as soon as possible';
     }
 
     handleOnClick() {
-        this.validateForm();
-        if (this.state.isValid) {
+        const feedback = document.querySelector('.feedback_message');
+        feedback.innerHTML = '';
+        if (this.isValid()) {
             this.sendMessage();
         }
+        
     }
 
     showErr(error) {
-        console.log('error field', error.field)
         const id = 'contact_' + error.field;
         const inputId = 'client_' + error.field;
         const msg = error.msg;
         document.getElementById(id).innerHTML = msg;
         document.getElementById(inputId).classList.add('error');
-        this.setState({isValid: false})
     }
 
      hideErr() {
-            document.querySelectorAll('.feedback').forEach((elem) =>{
-                elem.innerHTML = '';
-            });
-            document.querySelectorAll('.error').forEach((elem) => {
-                elem.classList.remove('error');
-            });
-            this.setState({isValid: true})
+        document.querySelectorAll('.feedback').forEach((elem) =>{
+            elem.innerHTML = '';
+        });
+        document.querySelectorAll('.error').forEach((elem) => {
+            elem.classList.remove('error');
+        });
     }
 
-
-
-    validateForm() {
+    isValid() {
         this.hideErr();
+        let isVal = true;
         var regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        console.log(this.state, 'state');
             if ( this.state.client_name === '') {
                 this.showErr({msg: 'Please type Your name', field: 'name'});
+                isVal = false;
             } 
             if (this.state.client_email === '') {
                 this.showErr({msg: 'Please type Your email adress', field: 'email'});
+                isVal = false;
             } else if (!regEx.test(this.state.client_email)) {
                 this.showErr({msg: 'Invalid email adress, try once again', field: 'email'});
+                isVal = false;
             } 
             if (this.state.client_phone.trim().length < 9 ) {
                 this.showErr({msg: 'Invalid phone number', field: 'phone'});
+                isVal = false;
             }
             if (this.state.client_msg.length < 3) {
                 this.showErr({msg: 'The message should be at least 3 characters long', field: 'msg'});
+                isVal = false;
             }
+            return isVal;
     }
 
 
