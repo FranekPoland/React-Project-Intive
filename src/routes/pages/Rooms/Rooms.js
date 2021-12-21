@@ -35,7 +35,7 @@ class Rooms extends React.Component {
     render() { 
         const rooms = this.state.rooms;
         const roomsList = rooms.map((room) => {
-           return (<li key={room.id}>
+           return (<li className="list-room" key={room.id}>
                  <Content title={room.title}
                           price={room.price}
                           currency={room.currency}
